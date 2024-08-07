@@ -1,0 +1,81 @@
+.navbarcol{
+    font-size: 20px;
+    padding-right: 80px;
+}
+.navbardata{
+    padding-right: 25px;
+}
+.head-container{
+    background-image: url("Untitled-design.png");
+    height: 90vh;
+    width: 100vw;
+    background-size: cover;
+}
+.intro{
+    margin: 150px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.intro-data{
+    font-family: roboto;
+    font-size: 18px;
+    margin-right: 650px;
+    color: #ffffff;
+}
+.explore-btn{
+    background-color: white;
+    color: black;
+    width: 120px;
+}
+.explore-btn:hover{
+    background-color: blue;
+    color: white;
+}
+#navbaritem1{
+    color: #323f4b;
+    font-family: Roboto;
+}
+#navbaritem2{
+    color: #323f4b;
+    font-family: Roboto;
+}
+#navbaritem3{
+    color: #323f4b;
+    font-family: Roboto;
+}
+#navbaritem4{
+    color: #323f4b;
+    font-family: Roboto;
+}
+.logo-navbar{
+     width: 190px;
+}
+.help-button{
+    background-color: white;
+    color: black;
+    width: 120px;
+    margin-top: 400px;
+    margin-left: 1300px;
+    border-top-right-radius: 330px;
+    border-bottom-left-radius: 400px;
+    border-top-left-radius: 330px;
+    position: fixed;
+}
+.help-button:hover{
+    background-color: blue;
+    color: white;
+}
+.help-title{
+    font-weight: normal;
+    font-family: Roboto;
+}
+.contact-us{
+    margin-left: 40px;
+}
+.contact-head{
+    font-size: 25px;
+}
+.contact-icon{
+    height: 90px;
+    width: 90px;
+}

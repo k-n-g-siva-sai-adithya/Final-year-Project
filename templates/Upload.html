@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='Upload.css') }}">
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="Home.html">
+          <img class="logo-navbar" src="{{ url_for('static', filename='logo1.jpg') }}">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbarcol" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active navbardata">
+              <a class="nav-link" id="navbaritem1" href= "{{ url_for('Home') }}">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item navbardata">
+              <a class="nav-link" id="navbaritem2" href="{{ url_for('About') }}">About</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav><br><br><br><br><br>
+        <div class="upload-box">
+            <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file" class="inputfile" accept="image/jpeg, image/png, image/jpg">
+                <label for="file" class="upload-button">Upload <i class="fa-solid fa-cloud-arrow-up"></i></label>
+                <br><br>
+                <p style="color:#454545;">*Upload in JPEG/PNG/JPG format only</p>
+                <button type="submit" class="btn btn-primary">Result</button>
+                <p>Don't have an X-ray? No worries we got you covered</p>
+                <a target="_blank" href="https://www.healthfrog.in/laboratory/x-ray-centres/andhra-pradesh/vijayawada">Click Here</a>
+                <br><br>
+                
+            </form>
+        </div>
+    <script>
+        document.getElementById('file').addEventListener('change', function(event) {
+            var files = event.target.files;
+            var imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = ''; // Clear previous images
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var imageElement = document.createElement('img');
+                imageElement.src = URL.createObjectURL(file);
+                imageContainer.appendChild(imageElement);
+            }
+        });
+    </script>
+</body>
+</html>

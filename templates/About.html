@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='About.css') }}"
+    />
+    <script
+      src="https://kit.fontawesome.com/ac42c3b1f7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="Home.html">
+        <img
+          class="logo-navbar"
+          src="{{ url_for('static', filename='logo1.jpg') }}"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbarcol" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active navbardata">
+            <a class="nav-link" id="navbaritem1" href="{{ url_for('Home') }}"
+              >Home<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item navbardata">
+            <a class="nav-link" id="navbaritem2" href="#">About</a>
+          </li>
+          <li class="nav-item navbardata">
+            <a class="nav-link" id="navbaritem3" href="{{ url_for('Upload') }}"
+              >Upload</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br /><br /><br />
+    <div class="about-container">
+      <p>
+        <b>Welcome..!</b> to our platform dedicated to providing comprehensive
+        information about knee degenerative arthritis. We understand the
+        challenges and complexities associated with this condition and aim to
+        empower individuals with knowledge to better manage their health.
+      </p>
+      <br />
+      <h4>What is Knee Degenerative Arthritis?</h4>
+      <br />
+      <p>
+        Knee degenerative arthritis, also known as osteoarthritis of the knee,
+        is a common condition characterized by the gradual breakdown of
+        cartilage in the knee joint. This degeneration leads to symptoms such as
+        pain, stiffness, swelling, and reduced mobility. While aging is a
+        significant risk factor, other factors such as genetics, previous knee
+        injuries, obesity, and overuse can also contribute to the development of
+        knee degenerative arthritis.
+      </p>
+      <br />
+      <p>
+        Arthritis is one of the most common chronic health conditions worldwide,
+        affecting millions of people of all ages. According to the World Health
+        Organization (WHO), over 300 million people worldwide suffer from
+        arthritis.
+      </p>
+      <br />
+      <p>
+        <h5>Knee degenerative arthritis (KDA) can be sub-divided into 5
+        grades:</h5><br />Grade 0: This is the “normal” knee health<br>Grade 1: Very
+        minor bone spur growth and is not experiencing any pain or
+        discomfort.<br />Grade 2: This is the stage where people will experience
+        symptoms for the first time. They will have pain after a long day of
+        walking and will sense a greater stiffness in the joint. It is a mild
+        stage of the condition, but X-rays will already reveal greater bone spur
+        growth. The cartilage will likely remain at a healthy size.<br />
+        Grade 3: Moderate OA. Frequent pain during movement, joint stiffness
+        will also be more present, especially after sitting for long periods and
+        in the morning. The cartilage between the bones shows obvious damage,
+        and the space between the bones is getting smaller.<br />
+        Grade 4: This is the most severe stage of OA. The joint space between
+        the bones will be dramatically reduced, the cartilage will almost be
+        completely gone and the synovial fluid will be decreased. This stage is
+        normally associated with high levels pain and discomfort during walking
+        or moving the joint.
+      </p>
+      <p>
+        In India, arthritis is a major public health concern. According to
+        estimates from the Indian Council of Medical Research (ICMR),
+        approximately 15% of the Indian population is affected by arthritis.
+      </p>
+      <br /><br /><img
+        src="{{ url_for('static', filename='world-oa.jpg') }}"
+        style="margin-left: 200px"
+      /><br /><br /><br />
+      <h5>What We Offer:</h5>
+      <br />
+      <p>
+        We are dedicated to offer accurate services to our clients with helpful
+        insights. When a X-ray image is uploaded, the image is carefully
+        examined and users are provided with severity of the arthritis using a
+        five scale grading system.
+      </p>
+      <br />
+      <p>
+        <b
+          >Thank you for visiting, and we hope you find our platform helpful on
+          your journey with knee degenerative arthritis.</b
+        >
+      </p>
+    </div>
+  </body>
+</html>
